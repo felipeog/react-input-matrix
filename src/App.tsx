@@ -111,6 +111,7 @@ const App: React.FC = () => {
         <button onClick={increaseCols}>+ col</button>
         <button onClick={decreaseCols}>- col</button>
       </div>
+
       <div className="inputs-wrapper">
         <table className="inputs">
           {inputRows.map((row) => (
