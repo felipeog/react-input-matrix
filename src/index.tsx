@@ -181,27 +181,34 @@ const ReactInputMatrix: React.FC<IProps> = ({
         style={{ maxWidth: maxWidth || '100%', maxHeight: maxHeight || 'auto' }}
       >
         <table className="ReactInputMatrix__inputs">
-          {inputRows.map((row) => (
-            <tr className="ReactInputMatrix__rows">
-              {row.map(({ name, value, row, col }) => (
-                <td className="ReactInputMatrix__col">
-                  {showLabels && (
-                    <label className="ReactInputMatrix__label" htmlFor={name}>
-                      {row}, {col}
-                    </label>
-                  )}
+          <tbody>
+            {inputRows.map((row, index) => (
+              <tr key={index} className="ReactInputMatrix__rows">
+                {row.map(({ name, value, row, col }) => (
+                  <td
+                    key={`${name}-${row}-${col}`}
+                    className="ReactInputMatrix__col"
+                  >
+                    {showLabels && (
+                      <label className="ReactInputMatrix__label" htmlFor={name}>
+                        {row}, {col}
+                      </label>
+                    )}
 
-                  <input
-                    className="ReactInputMatrix__input"
-                    id={name}
-                    name={name}
-                    value={value}
-                    onChange={(event) => handleInputChange({ event, row, col })}
-                  />
-                </td>
-              ))}
-            </tr>
-          ))}
+                    <input
+                      className="ReactInputMatrix__input"
+                      id={name}
+                      name={name}
+                      value={value}
+                      onChange={(event) =>
+                        handleInputChange({ event, row, col })
+                      }
+                    />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
