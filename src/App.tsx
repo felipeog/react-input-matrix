@@ -48,26 +48,22 @@ const App: React.FC = () => {
     }
 
     setMatrix((matrix) => ({ ...matrix, rows: newRows }))
-    setInputRows((inputRows) => {
-      return [...inputRows, emptyRow]
-    })
+    setInputRows((inputRows) => [...inputRows, emptyRow])
   }
 
   const decreaseRows = () => {
     const newRows = matrix.rows - 1
 
     setMatrix((matrix) => ({ ...matrix, rows: newRows }))
-    setInputRows((inputRows) => {
-      return inputRows.slice(0, -1)
-    })
+    setInputRows((inputRows) => inputRows.slice(0, -1))
   }
 
   const increaseCols = () => {
     const newCols = matrix.cols + 1
 
     setMatrix((matrix) => ({ ...matrix, cols: newCols }))
-    setInputRows((inputRows) => {
-      return inputRows.map((row, index) => [
+    setInputRows((inputRows) =>
+      inputRows.map((row, index) => [
         ...row,
         {
           name: `input-${index + 1}-${newCols}`,
@@ -76,16 +72,14 @@ const App: React.FC = () => {
           col: newCols,
         },
       ])
-    })
+    )
   }
 
   const decreaseCols = () => {
     const newCols = matrix.cols - 1
 
     setMatrix((matrix) => ({ ...matrix, cols: newCols }))
-    setInputRows((inputRows) => {
-      return inputRows.map((row) => row.slice(0, -1))
-    })
+    setInputRows((inputRows) => inputRows.map((row) => row.slice(0, -1)))
   }
 
   const handleInputChange = ({ event, row, col }: IInputChange) => {
