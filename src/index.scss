@@ -1,13 +1,10 @@
-:root {
-  --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-    sans-serif;
-  --font-size: 16px;
-  --border-radius: 0.4rem;
-}
+$font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-size: 16px;
+$border-radius: 0.4rem;
 
 .ReactInputMatrix {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
+  font-family: $font-family;
+  font-size: $font-size;
 }
 
 .ReactInputMatrix__buttons-wrapper {
@@ -18,7 +15,7 @@
 }
 
 .ReactInputMatrix__button {
-  font-family: var(--font-family);
+  font-family: $font-family;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -26,7 +23,7 @@
   font-size: 0.6rem;
   font-weight: bold;
   padding: 0.2rem 0.4rem;
-  border-radius: var(--border-radius);
+  border-radius: $border-radius;
 }
 
 .ReactInputMatrix__button--add {
@@ -57,7 +54,7 @@
 .ReactInputMatrix__inputs-wrapper {
   border: 0.1rem solid #ddd;
   overflow: scroll;
-  border-radius: var(--border-radius);
+  border-radius: $border-radius;
 }
 
 .ReactInputMatrix__inputs {
@@ -79,5 +76,5 @@
   font-size: 0.6rem;
 }
 .ReactInputMatrix__input {
-  font-family: var(--font-family);
+  font-family: $font-family;
 }

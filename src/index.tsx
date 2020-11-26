@@ -1,7 +1,5 @@
 import * as React from 'react'
-import './ReactInputMatrix.css'
-
-const { useEffect, useState } = React
+import './index.scss'
 
 // interfaces
 interface ICount {
@@ -37,8 +35,8 @@ const ReactInputMatrix: React.FC<IProps> = ({
   maxHeight,
 }) => {
   // state
-  const [count, setCount] = useState<ICount>({ rows: 1, cols: 1 })
-  const [inputRows, setInputRows] = useState<IInputRows[][]>([
+  const [count, setCount] = React.useState<ICount>({ rows: 1, cols: 1 })
+  const [inputRows, setInputRows] = React.useState<IInputRows[][]>([
     [
       {
         name: `input-${1}-${1}`,
@@ -130,7 +128,7 @@ const ReactInputMatrix: React.FC<IProps> = ({
   }
 
   // effects
-  useEffect(() => {
+  React.useEffect(() => {
     onMatrixChange?.(inputRows)
   }, [inputRows, onMatrixChange])
 
