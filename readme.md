@@ -23,6 +23,6 @@ maxHeight?: string | number
 <ReactInputMatrix onMatrixChange={(data) => console.log(data)} />
 ```
 
-![Screenshot 1](https://github.com/felipeog/react-input-matrix/blob/master/ReactInputMatrix-screenshot-1.png)
+![Screenshot 1](https://raw.githubusercontent.com/felipeog/react-input-matrix/master/ReactInputMatrix-screenshot-1.png)
 
-![Screenshot 2](https://github.com/felipeog/react-input-matrix/blob/master/ReactInputMatrix-screenshot-2.png)
+![Screenshot 2](https://raw.githubusercontent.com/felipeog/react-input-matrix/master/ReactInputMatrix-screenshot-2.png)
